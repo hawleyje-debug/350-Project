@@ -1,20 +1,21 @@
 /* ==========================================
-   Project 3: Dashboard Styling & Polish
+   Project 4: Dashboard Styling & Vibrant Polish
    ========================================== */
 :root {
-    --primary-color: #4F46E5;
-    --primary-hover: #4338CA;
-    --secondary-color: #6B7280;
-    --bg-color: #F3F4F6;
+    --primary-color: #6366F1;
+    --primary-hover: #4F46E5;
+    --secondary-color: #EC4899;
+    --bg-color: #F8FAFC;
     --card-bg: #FFFFFF;
-    --text-main: #1F2937;
+    --text-main: #0F172A;
     --error-color: #EF4444;
     --success-color: #10B981;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, #EEF2FF 0%, #F8FAFC 50%, #FCE7F3 100%);
+    background-attachment: fixed;
     color: var(--text-main);
     margin: 0;
     padding: 20px;
@@ -32,21 +33,26 @@ header {
 header h1 {
     color: var(--text-main);
     margin-bottom: 5px;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
     padding-bottom: 10px;
+    background: linear-gradient(90deg, #6366F1, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header p {
-    color: var(--secondary-color);
+    color: #475569;
     margin-top: 0;
+    font-weight: 500;
 }
 
 .card {
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 25px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .controls {
@@ -54,61 +60,69 @@ header p {
 }
 
 button {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
     color: white;
     border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
+    padding: 11px 18px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
     margin-right: 8px;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 button:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.45);
 }
 
 .btn-secondary {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
 }
 
 .btn-secondary:hover {
-    background-color: #4B5563;
+    background: linear-gradient(135deg, #DB2777 0%, #BE185D 100%);
+    box-shadow: 0 6px 16px rgba(236, 72, 153, 0.45);
 }
 
 .feedback {
     font-style: italic;
-    color: var(--secondary-color);
+    color: #64748B;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 /* Post Card Layout */
 .post-card {
-    background: #F9FAFB;
-    border: 1px solid #E5E7EB;
-    border-radius: 6px;
-    padding: 15px;
-    margin-bottom: 12px;
-    transition: box-shadow 0.2s ease;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
 }
 
 .post-card:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
 }
 
 .post-title {
     font-weight: bold;
-    font-size: 1.05em;
+    font-size: 1.1em;
     color: var(--text-main);
     margin-bottom: 8px;
 }
 
 .post-body {
-    color: var(--secondary-color);
+    color: #475569;
     font-size: 0.95em;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: none; /* Hidden by default for expand/collapse feature */
 }
 
@@ -123,16 +137,19 @@ button:hover {
 }
 
 .btn-sm {
-    padding: 6px 12px;
+    padding: 7px 14px;
     font-size: 0.85em;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
 }
 
 .favorite-badge {
-    background-color: #FEF3C7;
-    color: #D97706;
-    padding: 2px 8px;
-    border-radius: 4px;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    color: #B45309;
+    padding: 3px 10px;
+    border-radius: 6px;
     font-size: 0.8em;
     font-weight: bold;
     margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(245, 158, 11, 0.2);
 }
+```[cite: 9]
