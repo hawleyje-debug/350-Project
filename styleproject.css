@@ -1,0 +1,138 @@
+/* ==========================================
+   Project 3: Dashboard Styling & Polish
+   ========================================== */
+:root {
+    --primary-color: #4F46E5;
+    --primary-hover: #4338CA;
+    --secondary-color: #6B7280;
+    --bg-color: #F3F4F6;
+    --card-bg: #FFFFFF;
+    --text-main: #1F2937;
+    --error-color: #EF4444;
+    --success-color: #10B981;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--text-main);
+    margin-bottom: 5px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+header p {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.controls {
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #4B5563;
+}
+
+.feedback {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Post Card Layout */
+.post-card {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 1.05em;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.post-body {
+    color: var(--secondary-color);
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    display: none; /* Hidden by default for expand/collapse feature */
+}
+
+.post-body.expanded {
+    display: block;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85em;
+}
+
+.favorite-badge {
+    background-color: #FEF3C7;
+    color: #D97706;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 10px;
+}

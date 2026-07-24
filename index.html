@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3: API Integration Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>My Dashboard - Project 3</h1>
+            <p>Simulating external API data fetching and error management</p>
+        </header>
+
+        <main>
+            <!-- New Section for Fetched API Data -->
+            <section class="card api-section">
+                <h2>Fetched Community Posts</h2>
+                <div class="controls">
+                    <button id="load-posts-btn">Load Posts</button>
+                    <button id="clear-posts-btn" class="btn-secondary">Clear Data</button>
+                </div>
+
+                <!-- Feedback area for loading states or error notifications -->
+                <div id="feedback-msg" class="feedback">Click "Load Posts" to fetch data from the API.</div>
+
+                <!-- Container where fetched posts will be displayed dynamically -->
+                <div id="posts-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Linking our JavaScript file -->
+    <script src="dashboard_project.js"></script>
+</body>
+</html>
