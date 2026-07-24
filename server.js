@@ -1,7 +1,7 @@
 /**
  * Name: Jacob Hawley
  * File: server.js
- * Description: Practice 9 - Setting up a basic Express.js server with a custom GET API endpoint.
+ * Description: Practice 9 & 10 - Express server with GET and POST endpoints, configured for cloud deployment.
  */
 
 // Import the express module so we can use its framework features
@@ -10,28 +10,35 @@ const express = require('express');
 // Initialize our express application
 const app = express();
 
-// Define our port number where the server will listen for requests
-const PORT = 3000;
+// Middleware to parse incoming JSON payloads for POST requests
+app.use(express.json());
+
+// Define our port number (uses Render's environment port when deployed, or 3000 locally)
+const PORT = process.env.PORT || 3000;
 
 // ==========================================================
 // Custom GET Endpoint
 // ==========================================================
-// When a client sends a GET request to '/api/message', this route handles it 
-// and sends back a structured JSON response.
 app.get('/api/message', (req, res) => {
     res.json({ message: 'Hello from your first Express API!' });
 });
 
 // ==========================================================
+// Custom POST Endpoint (from Practice 10)
+// ==========================================================
+app.post('/api/notes', (req, res) => {
+    const { name, note } = req.body;
+    
+    if (!name || !note) {
+        return res.status(400).json({ error: 'Both name and note are required.' });
+    }
+    
+    res.status(201).json({ message: 'Note received!', data: { name, note } });
+});
+
+// ==========================================================
 // Start the Server
 // ==========================================================
-// Tell the app to listen on port 3000 and log a confirmation message to the console
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
-// Set up the port to use the environment variable provided by Render, or fallback to 3000 locally
-const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
