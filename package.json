@@ -1,0 +1,22 @@
+{
+  "name": "my-express-server",
+  "version": "1.0.0",
+  "description": "My first Express API endpoint project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}{
+  "name": "my-express-project",
+  "version": "1.0.0",
+  "description": "Express server deployment practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
